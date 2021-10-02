@@ -302,7 +302,7 @@ use Pentest Monkey Reverse Shell Cheatsheet for an already made reverse shell co
 
 
   
-  #19. Ruby
+  #19. Ruby privilege escalation
 	``````````````````````````````````````````````````````````````````````````````` 
 	 sudo -l
 	 /user/bin/ruby
