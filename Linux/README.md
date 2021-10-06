@@ -311,4 +311,12 @@ use Pentest Monkey Reverse Shell Cheatsheet for an already made reverse shell co
 ````````` ```````````````````````````````````````````````````````````````````````
 	 
   
-  
+  #20. /etc/sysconfig/network-scripts/ (Centos/Redhat)
+
+	 
+	 ````````````````````````````````````````````````````````````````````
+	 
+	 NAME=Network /bin/id
+         ONBOOT=yes
+         DEVICE=eth0
+    ````````````````````````````````````````````````````````````````````````````````
